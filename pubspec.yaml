@@ -1,0 +1,49 @@
+name: ecommerce_app
+description: A new Flutter project for an e-commerce UI.
+
+publish_to: 'none' # Ensures your package isn't accidentally published to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Specifies the Dart SDK range
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6 # For iOS-style icons
+  google_fonts: ^6.1.0 # For custom fonts
+  firebase_database: ^11.3.9 # For Firebase Realtime Database
+  firebase_core: ^3.2.0 # <--- Crucial for Firebase initialization. Check pub.dev for latest.
+  intl: ^0.19.0 # <--- For NumberFormat and localization. Check pub.dev for latest.
+  smooth_page_indicator: ^1.1.0 # For the banner page indicator
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0 # For code analysis and linting
+
+flutter:
+  uses-material-design: true # Enables Material Design in your Flutter app
+
+  # To add assets to your application, add an assets section below.
+  assets:
+    # Category Icons (these are local assets, not product images)
+    - assets/mobile.png
+    - assets/headphone.jpeg # Placeholder image, could be a general headphones icon
+    - assets/laptop.jpeg    # Placeholder image, could be a general laptop icon
+    - assets/speaker.jpeg   # Placeholder image, could be a general speaker icon
+    - assets/tablet.jpeg    # Placeholder image, could be a general tablet icon
+    - assets/watch.jpeg     # Placeholder image, could be a general watch icon
+    - assets/more.jpeg      # Placeholder for 'More' category
+
+    # Product Images (these are assumed to be network URLs in the data, but
+    # if you intend to use local assets for specific products, list them here).
+    # For now, these are not directly used by Image.asset for products, only categories.
+    # Product images in Firebase data should be network URLs.
+    - assets/iphone.jpeg
+    - assets/mobile1.jpeg
+    - assets/Desert Titanium.jpeg
+    - assets/Natural Titanium.jpeg
+    - assets/black Titanium.jpeg
+    - assets/White Titanium.jpeg
